@@ -1,12 +1,9 @@
 import './Home.scss';
-import BannerArea from './BannerArea';
+import BannerArea from '../MainManu/BannerArea';
 
 function Home() {
   return (
     <div className='home-container'>
-      <div className="banner-area">
-     <BannerArea/>
-      </div>
     </div>
   )
 }

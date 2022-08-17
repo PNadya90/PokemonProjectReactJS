@@ -5,29 +5,5 @@
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    .header-area {
-        background-color: #f0ffff;
-    }
-    .content-area {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-    }
-
-    .footer-area {
-        padding-top: 20px;
-        border-top: black dashed 2px;
-        background-color: #ffcc01;
-        min-height: 80px;
-
-        .footer-info {
-            margin: 0 10%;
-            display: flex;
-            justify-content: space-around;
-            a {
-                text-decoration: none;
-                color: black;
-            }
-        }
-    }
+  
 }
