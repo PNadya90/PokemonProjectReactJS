@@ -35,68 +35,15 @@ $border-color-hover: $color-black;
     }
 }
 
-.nav-area {
-
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
-    align-items: center;
-    background-color: #f0ffff;
-    margin: 0% 5%;
-
-    .active {
-        background-color: $btn-background-hover;
-        color: $btn-color-hover;
-        border-color: $border-color-hover;
-
-        &:after {
-            background-image: repeating-linear-gradient(45deg,
-                    $btn-color-hover,
-                    $btn-color-hover 1px,
-                    transparent 2px,
-                    transparent 5px);
-            border-top: 1px solid $border-color-hover;
-            animation: stripe-slide 1s infinite linear forwards;
-        }
-    }
-
-    .left-container {
-        display: flex;
-
-        .logo-area {
-            margin-right: 1%;
-
-            img {
-                width: 150px;
-                height: 70px;
-            }
-
-            background-color: azure;
-        }
-
-        .about-btn {
-            margin: 0px 1%;
-        }
-
-    }
-}
-
-.rtl-orientation {
-    flex-direction: row-reverse;
-}
-
-.login-btn {
-
-    min-width: 80px;
-}
-
-.btn {
+.btnMore {
     @include reset-button;
     display: block;
     text-decoration: none;
-    font-size: 12px;
-    padding: 1em;
-    height: 70px;
+    font-size: 15px;
+    padding: 5px;
+    height: 40px;
+    width: 75vw;
+    min-width: 280px;
     background-color: $btn-background;
     color: $btn-color;
     border: 2px solid $border-color;
@@ -143,8 +90,4 @@ $border-color-hover: $color-black;
         }
     }
 
-    &--radius {
-        border-radius: 36px;
-    }
 }
-

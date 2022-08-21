@@ -9,9 +9,9 @@ function Contact() {
         <img className='imgContctUs' src="forContact.jpg"/>
     </div>
     <div className="contats-area">
-        <h3></h3>
+        <h3>Call us:</h3>
         <p>Phone: +123456789 </p>
-        <h3></h3>
+        <h3>Email us:</h3>
         <p>E-mail: 12345648@gmail.com</p>
     </div>
 </div>
