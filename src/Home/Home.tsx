@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-import ShowMoreBtn from '../UI/ShowMoreBtn';
 import './Home.scss';
 import PType from './PTypes/PType';
 

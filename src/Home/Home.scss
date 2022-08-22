@@ -4,11 +4,12 @@
     flex-direction: column;
     align-items: center;
     padding: 10px 0;
-    .banner-area {
-        background-color: #f0ffff;
-        height: 400px;
+    background-color: #ffeded;;
+    .types-display{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    
    
 }
 

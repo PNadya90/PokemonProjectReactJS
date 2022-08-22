@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import TypeInfo from "../../Interfaces/TypeInfo";
 import ShowMoreBtn from "../../UI/ShowMoreBtn";
 import PokemonsByType from "./PokemonsByType/PokemonsByType";
-
+import './PType.scss'
 
 function PType() {
     let typesName: string[] | undefined;
@@ -10,7 +10,7 @@ function PType() {
     const [pTypes, setTypes] = useState<TypeInfo[]>();
     let [typesCount, setTypesCount] = useState(2);
     // let [err, setErr] = useState();
-  
+
     const showMoreTypes = () => {
         // console.log(typesCount);
         setTypesCount(prev => prev + 2);
@@ -29,19 +29,20 @@ function PType() {
     pTypes?.map(pType => {
         let arr = pType.url.split('/');
         pType.id = +arr[arr.length - 2];
-        typeId= pType.id;
+        typeId = pType.id;
         return pType;
     })
     // console.log(pTypes);
+    
     return (
         <>
-            {pTypes?.length! > 0 ? pTypes?.map(pType =>{
-                return <>
-                <ShowMoreBtn>SHOW MORE {pType.name.toLocaleUpperCase()} POCEMONS</ShowMoreBtn>
-                <PokemonsByType key={pType.id} pTypeId={pType.id} />
-                </>
+            {pTypes?.length! > 0 ? pTypes?.map(pType => {
+                return <div key={pType.id} className='pType-area'>
+                    <ShowMoreBtn >SHOW MORE {pType.name.toLocaleUpperCase()} POKEMONS</ShowMoreBtn>
+                    <PokemonsByType pTypeId={pType.id} />
+                </div>
             }) : console.log('LOADING ...')}
-            <ShowMoreBtn onClick={showMoreTypes} >SHOW MORE POCEMONS TYPES</ShowMoreBtn>
+            <ShowMoreBtn onClick={showMoreTypes}>SHOW MORE POKEMONS TYPES</ShowMoreBtn>
         </>
     )
 }

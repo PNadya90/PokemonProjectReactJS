@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react'
 import PokemonsByTypeInterface from '../../../Interfaces/PokemonsByTypeInterface';
 import PokemonShortDscr from './PokemonShortDscr/PokemonShortDscr';
 
-interface SomeType{
-    pTypeId:number|undefined,
+interface SomeType {
+    pTypeId: number | undefined,
 }
 
-export default function PokemonsByType(props:SomeType) {
+export default function PokemonsByType(props: SomeType) {
     let [pokemons, setPokemons] = useState<PokemonsByTypeInterface[]>();
-    const pTypeId: number|undefined = props.pTypeId;
+    const pTypeId: number | undefined = props.pTypeId;
     let pokemonsName: string[] | undefined;
     let pokemonsId: number[] | undefined;
 
@@ -20,15 +20,17 @@ export default function PokemonsByType(props:SomeType) {
     }, []);
 
     pokemonsName = pokemons?.map(pokemon => pokemon.pokemon.name);
-    console.log(pokemonsName);
+    // console.log(pokemonsName);
     pokemonsId = pokemons?.map((pokemon) => {
         let arr = pokemon.pokemon.url.split('/');
         return pokemon.pokemon.id = +arr[arr.length - 2];
     });
+    // console.log(pokemonsId);
+
 
     return (
         <>
-            {pokemons ? pokemons?.map(pokemon => <PokemonShortDscr></PokemonShortDscr>) : console.log('LOADING ...')}
+                {pokemons ? pokemons?.map(pokemon => <PokemonShortDscr key={pokemon.pokemon.id} pokemonId={pokemon.pokemon.id}></PokemonShortDscr>) : console.log('LOADING ...')}
         </>
     )
 }
