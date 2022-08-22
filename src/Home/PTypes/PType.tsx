@@ -13,7 +13,7 @@ function PType() {
   
     const showMoreTypes = () => {
         // console.log(typesCount);
-        setTypesCount(typesCount => typesCount + 2);
+        setTypesCount(prev => prev + 2);
     }
 
     useEffect(() => {
@@ -35,10 +35,13 @@ function PType() {
     // console.log(pTypes);
     return (
         <>
-            {pTypes?.length! > 0 ? pTypes?.map(pType =><PokemonsByType key={pType.id} pTypeId={pType.id} typeName= {typesName}/>) : console.log('LOADING ...')}
-    
+            {pTypes?.length! > 0 ? pTypes?.map(pType =>{
+                return <>
+                <ShowMoreBtn>SHOW MORE {pType.name.toLocaleUpperCase()} POCEMONS</ShowMoreBtn>
+                <PokemonsByType key={pType.id} pTypeId={pType.id} />
+                </>
+            }) : console.log('LOADING ...')}
             <ShowMoreBtn onClick={showMoreTypes} >SHOW MORE POCEMONS TYPES</ShowMoreBtn>
-            {/* {pTypes?.length! > 0 ? pTypes?.map(pType =><PokemonsByType key={pType.id} pTypeId={pType.id} />) : console.log('LOADING ...')} */}
         </>
     )
 }
