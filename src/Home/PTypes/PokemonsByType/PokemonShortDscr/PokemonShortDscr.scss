@@ -1,0 +1,109 @@
+.pokemon-short-dscr {
+    height: 20vh;
+    width: 26vw;
+    margin: 5px;
+    background-color: #f0ffff;
+    min-width: 160px;
+    min-height: 180px;
+    cursor: pointer;
+
+    .pokemon-card {
+        display: flex;
+        position: relative;
+        height: 100%;
+        box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+
+
+        .imgBox {
+            min-width: 100px;
+
+            .pokemonName {
+                position: absolute;
+                left:10px;
+            }
+
+            .pokemon-img {
+                min-width: 160px;
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+            }
+        }
+
+        .pokemon-desc {
+            font-size: 12px;
+            padding-top: 15px;
+            font-weight: 600;
+            position: relative;
+            top: 20px;
+            width: 60%;
+            div {
+                color: black;
+            }
+
+        }
+
+        .add-button-area {
+            position: absolute;
+            bottom: 5px;
+            right: 7px;
+            background: #ffd33e;
+            border-radius: 30px;
+            border: dashed 1px black;
+  
+
+            .add-button {
+                width: 40px;
+                height: 40px;
+                font-size: 30px;
+                border: none;
+                background-color: unset;
+                color:black
+            }
+        }
+    }
+}
+
+
+@media screen and(max-width:1000px) {
+    .pokemon-item-component {
+        .pokemon-card {
+
+            .pokemon-desc {
+                display: none;
+            }
+
+        }
+    }
+}
+//for firefox 
+@supports (-moz-appearance:none){
+    .pokemon-item-component {
+        .pokemon-card {
+            .imgBox {
+                .pokemon-img {
+                    width:initial;
+                }
+            }
+            .pokemon-desc {
+                width: 100%;
+            }
+        }
+    }
+}
+//for safari
+@media not all and (min-resolution:.001dpcm) { 
+    @supports (-webkit-appearance:none) {
+        .pokemon-item-component {
+            .pokemon-card {
+                .imgBox {
+                    .pokemon-img {
+                        width:100%;
+                    }
+                }
+                .pokemon-desc {
+                    width: 100%;
+                }
+            }
+        } 
+    }}

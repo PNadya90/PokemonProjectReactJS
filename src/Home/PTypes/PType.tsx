@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import TypeInfo from "../../Interfaces/TypeInfo";
 import ShowMoreBtn from "../../UI/ShowMoreBtn";
-import PocemonsByType from "./PocemonsByType/PocemonsByType";
+import PokemonsByType from "./PokemonsByType/PokemonsByType";
 
 
 function PType() {
@@ -12,7 +12,7 @@ function PType() {
     // let [err, setErr] = useState();
   
     const showMoreTypes = () => {
-        console.log(typesCount);
+        // console.log(typesCount);
         setTypesCount(typesCount => typesCount + 2);
     }
 
@@ -32,12 +32,13 @@ function PType() {
         typeId= pType.id;
         return pType;
     })
-    console.log(pTypes);
+    // console.log(pTypes);
     return (
         <>
-            {pTypes?.length! > 0 ? pTypes?.map(pType =><ShowMoreBtn key={pType.id}>SHOW ALL {pType.name.toUpperCase()} POCEMONS</ShowMoreBtn>) : console.log('LOADING ...')}
-            
+            {pTypes?.length! > 0 ? pTypes?.map(pType =><PokemonsByType key={pType.id} pTypeId={pType.id} typeName= {typesName}/>) : console.log('LOADING ...')}
+    
             <ShowMoreBtn onClick={showMoreTypes} >SHOW MORE POCEMONS TYPES</ShowMoreBtn>
+            {/* {pTypes?.length! > 0 ? pTypes?.map(pType =><PokemonsByType key={pType.id} pTypeId={pType.id} />) : console.log('LOADING ...')} */}
         </>
     )
 }
