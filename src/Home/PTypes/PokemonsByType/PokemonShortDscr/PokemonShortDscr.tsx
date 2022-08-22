@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Pokemon } from '../../../../Interfaces/Pokemon';
-import './PokemonShortDscr.scss'
+import './PokemonShortDscr.scss';
 
 interface SomePokemon {
     pokemonId: number
@@ -35,7 +35,7 @@ export default function PokemonShortDscr(props: SomePokemon) {
                 </div>
                 <div className="add-button-area">
                     <button className="add-button" >
-
+                    <i className="bi bi-cart-plus"></i>
                     </button>
                 </div>
             </div>
