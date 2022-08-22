@@ -16,7 +16,7 @@ export default function PokemonShortDscr(props: SomePokemon) {
             .then((response) => response.json())
             .then((response) => setPokemon(response))
     }, []);
-    console.log(pokemon?.name);
+    // console.log(pokemon?.name);
     pokemonName = `${pokemon?.name[0].toLocaleUpperCase()}${pokemon?.name.slice(1)}`;
 
     return (
@@ -28,7 +28,9 @@ export default function PokemonShortDscr(props: SomePokemon) {
                 </div>
                 <div className="pokemon-desc">
                     <div>
-                        
+                        {pokemon?.stats?.map((stat) => {
+                            return (<div>{`${stat.stat.name[0].toLocaleUpperCase()}${stat.stat.name.slice(1)}`}: {stat.base_stat}</div>)
+                        })}
                     </div>
                 </div>
                 <div className="add-button-area">
