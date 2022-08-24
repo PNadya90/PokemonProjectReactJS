@@ -1,3 +1,6 @@
+.link-to-pokemonCard{
+    text-decoration: none;
+    color: black;
 .pokemon-short-dscr {
     height: 20vh;
     width: 26vw;
@@ -12,35 +15,33 @@
         position: relative;
         height: 100%;
         box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
-
+        justify-content: space-between;
 
         .imgBox {
-            min-width: 100px;
+            max-width: 100px;
 
             .pokemonName {
                 position: absolute;
-                left:10px;
+                left: 10px;
             }
 
             .pokemon-img {
-                min-width: 160px;
-                width: 100%;
+                // min-width: 160px;
                 height: 100%;
-                padding: 20px;
+                padding: 25px;
             }
         }
 
         .pokemon-desc {
             font-size: 12px;
-            padding-top: 15px;
+            padding-top: 26px;
             font-weight: 600;
             position: relative;
-            top: 20px;
-            width: 60%;
+            width: 100%;
+            margin-left: 60px;
             div {
                 color: black;
             }
-
         }
 
         .add-button-area {
@@ -50,7 +51,6 @@
             background: #ffd33e;
             border-radius: 30px;
             border: dashed 1px black;
-  
 
             .add-button {
                 width: 40px;
@@ -58,52 +58,24 @@
                 font-size: 30px;
                 border: none;
                 background-color: unset;
-                color:black
+                color: black;
             }
         }
     }
 }
+}
 
+.link-to-pokemonCard:hover{
+    color: black;
+}
 
-@media screen and ( max-width:1000px ) {
-    .pokemon-item-component {
+@media all and (max-width: 1000px) {
+    .pokemon-short-dscr {
         .pokemon-card {
-
             .pokemon-desc {
+                margin: 0;
                 display: none;
             }
-
         }
     }
 }
-//for firefox 
-@supports (-moz-appearance:none){
-    .pokemon-item-component {
-        .pokemon-card {
-            .imgBox {
-                .pokemon-img {
-                    width:initial;
-                }
-            }
-            .pokemon-desc {
-                width: 100%;
-            }
-        }
-    }
-}
-//for safari
-@media not all and (min-resolution:.001dpcm) { 
-    @supports (-webkit-appearance:none) {
-        .pokemon-item-component {
-            .pokemon-card {
-                .imgBox {
-                    .pokemon-img {
-                        width:100%;
-                    }
-                }
-                .pokemon-desc {
-                    width: 100%;
-                }
-            }
-        } 
-    }}

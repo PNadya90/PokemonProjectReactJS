@@ -7,7 +7,7 @@ function BannerArea() {
       <Carousel.Item>
         <img
           className="bannerImg"
-          src="pikachu.png"
+          src="/pikachu.png"
           alt="First slide"
         />
         <Carousel.Caption>
@@ -18,7 +18,7 @@ function BannerArea() {
       <Carousel.Item>
         <img
           className="bannerImg"
-          src="wing.png"
+          src="/wing.png"
           alt="Second slide"
         />
         <Carousel.Caption>
@@ -29,7 +29,7 @@ function BannerArea() {
       <Carousel.Item>
         <img
           className="bannerImg"
-          src="Bulbasaur.png"
+          src="/Bulbasaur.png"
           alt="Third slide"
         />
         <Carousel.Caption>

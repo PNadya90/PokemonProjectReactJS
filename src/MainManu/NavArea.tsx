@@ -10,7 +10,7 @@ function NavArea() {
         <div className="nav-area">
             <div className="left-container">
                 <div className="logo-area">
-                    <Link to='/'><img src="Logo.png" alt="Pokemon Logo" /></Link>
+                    <Link to='/'><img src="/Logo.png" alt="Pokemon Logo" /></Link>
 
                 </div>
                 <NavButton to='/' >HOME</NavButton>

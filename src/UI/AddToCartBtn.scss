@@ -1,0 +1,16 @@
+.add-button-area {
+    position: fixed;
+    right: 5vw;
+    bottom: 10vh;
+
+
+    .add-button {
+        width: 70px;
+        height: 70px;
+        font-size: 40px;
+        background: #ffd33e;
+        border-radius: 35px;
+        border: dashed 2px black;
+        color: black;
+    }
+}

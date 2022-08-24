@@ -1,5 +1,13 @@
 import './About.scss'
+import React, { useEffect, useState } from 'react'
 function About() {
+
+  let [val, setVal]=useState<number>();
+  useEffect(() => {
+    console.log("effect");
+  },[]);
+  console.log("code");
+  setTimeout(()=>{setVal(1);},5000)
   return (
     <div className="aboutUs-container">
       <div className="welcomHeader-area">

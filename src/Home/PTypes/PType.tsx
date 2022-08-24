@@ -1,20 +1,17 @@
-import React, { useEffect, useState } from "react";
+  import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import TypeInfo from "../../Interfaces/TypeInfo";
 import ShowMoreBtn from "../../UI/ShowMoreBtn";
 import PokemonsByType from "./PokemonsByType/PokemonsByType";
-import './PType.scss'
+import './PType.scss';
 
 function PType() {
     let typesName: string[] | undefined;
     let typeId: number;
     const [pTypes, setTypes] = useState<TypeInfo[]>();
     let [typesCount, setTypesCount] = useState(2);
+    let pokemonsCount=6;
     // let [err, setErr] = useState();
-
-    const showMoreTypes = () => {
-        // console.log(typesCount);
-        setTypesCount(prev => prev + 2);
-    }
 
     useEffect(() => {
         fetch("https://pokeapi.co/api/v2/type/")
@@ -32,14 +29,22 @@ function PType() {
         typeId = pType.id;
         return pType;
     })
-    // console.log(pTypes);
+    console.log(typesName);
+
+    const showMoreTypes = () => {
+        // console.log(typesCount);
+        setTypesCount(count => count + 2);
+    }
     
+  
     return (
         <>
             {pTypes?.length! > 0 ? pTypes?.map(pType => {
                 return <div key={pType.id} className='pType-area'>
-                    <ShowMoreBtn >SHOW MORE {pType.name.toLocaleUpperCase()} POKEMONS</ShowMoreBtn>
-                    <PokemonsByType pTypeId={pType.id} />
+                    <Link to= {`${pType.name}/${pType.id}`} className='link-to'>
+                    <ShowMoreBtn>SHOW ALL {pType.name.toLocaleUpperCase()} POKEMONS</ShowMoreBtn>
+                    </Link>
+                    <PokemonsByType id={pType.id?.toString()} typeName={pType.name} count={pokemonsCount}/>
                 </div>
             }) : console.log('LOADING ...')}
             <ShowMoreBtn onClick={showMoreTypes}>SHOW MORE POKEMONS TYPES</ShowMoreBtn>

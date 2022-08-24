@@ -8,7 +8,7 @@ function Contact() {
     <div className="imgBox">
         <img className='imgContctUs' src="forContact.jpg"/>
     </div>
-    <div className="contats-area">
+    <div className="contacts-area">
         <h3>Call us:</h3>
         <p>Phone: +123456789 </p>
         <h3>Email us:</h3>

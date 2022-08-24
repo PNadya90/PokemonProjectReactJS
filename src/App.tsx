@@ -5,7 +5,9 @@ import About from './About/About';
 import Contact from './Contact/Contact';
 import UserAccount from './UserAccount/UserAccount';
 import Layouts from './Layouts';
-
+import FullType from './FullType/FullType';
+import 'normalize.css';
+import PokemonCard from './PokemonCard/PokemonCard';
 
 function App() {
   return (
@@ -16,7 +18,9 @@ function App() {
             <Route path='about' element={<About />} />
             <Route path='contact' element={<Contact/>} />
             <Route path='userAccount' element={<UserAccount/>} />
-            <Route path='pokemon:id' />
+            <Route path='/:typeName/:id' element={<FullType/>}/>
+            <Route path='/:typeName/:id/pokemon/:id' element={<PokemonCard/>}/>
+            <Route path='pokemon/:id' element={<PokemonCard/>}/>
           </Route>
         </Routes>
     </div>
@@ -24,3 +28,4 @@ function App() {
 }
 
 export default App;
+   

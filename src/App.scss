@@ -1,9 +1,13 @@
 .container-page {
     height: 100vh;
-    width: 100vw;
     background-color: #ffeded;
     min-height: 100%;
     display: flex;
     flex-direction: column;
-  
+    width: 100vw;
+}
+
+@media screen and (max-width:400px) {
+    .container-page {
+    width: fit-content;}
 }
