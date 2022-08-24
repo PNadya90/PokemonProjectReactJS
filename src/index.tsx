@@ -4,15 +4,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { ModalState } from './Context/ModalContext';
 // import 'normalize.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
+  <ModalState>
   <BrowserRouter>
       <App />
   </BrowserRouter>
+  </ModalState>
 );
 
 // If you want to start measuring performance in your app, pass a function
