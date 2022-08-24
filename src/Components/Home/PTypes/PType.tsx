@@ -1,6 +1,6 @@
   import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import TypeInfo from "../../Interfaces/TypeInfo";
+import TypeInfo from "../../../Interfaces/TypeInfo";
 import ShowMoreBtn from "../../UI/ShowMoreBtn";
 import PokemonsByType from "./PokemonsByType/PokemonsByType";
 import './PType.scss';

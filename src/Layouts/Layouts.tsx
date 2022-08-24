@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
-import BannerArea from './MainManu/BannerArea';
-import NavArea from './MainManu/NavArea'
+import BannerArea from '../Components/MainManu/BannerArea';
+import NavArea from '../Components/MainManu/NavArea'
 import './Layouts.scss'
 
 function Layouts() {

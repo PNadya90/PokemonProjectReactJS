@@ -1,13 +1,13 @@
-import Home from './Home/Home';
+import Home from './Components/Home/Home';
 import './App.scss';
 import { Route, Routes } from 'react-router-dom';
-import About from './About/About';
-import Contact from './Contact/Contact';
-import UserAccount from './UserAccount/UserAccount';
-import Layouts from './Layouts';
-import FullType from './FullType/FullType';
+import About from './Components/About/About';
+import Contact from './Components/Contact/Contact';
+import UserAccount from './Components/UserAccount/UserAccount';
+import Layouts from './Layouts/Layouts';
+import FullType from './Components/FullType/FullType';
 import 'normalize.css';
-import PokemonCard from './PokemonCard/PokemonCard';
+import PokemonCard from './Components/PokemonCard/PokemonCard';
 
 function App() {
   return (

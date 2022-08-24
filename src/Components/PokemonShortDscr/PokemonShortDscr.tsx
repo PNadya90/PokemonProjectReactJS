@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-import { Pokemon } from '../../../../Interfaces/Pokemon';
-import AddToCartBtn from '../../../../UI/AddToCartBtn';
+import { Pokemon } from '../../Interfaces/Pokemon';
+import AddToCartBtn from '../UI/AddToCartBtn';
 import './PokemonShortDscr.scss';
 
 interface SomePokemon {

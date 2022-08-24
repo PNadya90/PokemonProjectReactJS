@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import PokemonsByTypeInterface from '../../../Interfaces/PokemonsByTypeInterface';
-import PokemonShortDscr from './PokemonShortDscr/PokemonShortDscr';
+import PokemonsByTypeInterface from '../../../../Interfaces/PokemonsByTypeInterface';
+import PokemonShortDscr from '../../../PokemonShortDscr/PokemonShortDscr';
 
 interface SomeType {
     id: string | undefined,

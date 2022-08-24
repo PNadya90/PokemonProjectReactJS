@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useParams } from 'react-router-dom'
 import PokemonsByType from '../Home/PTypes/PokemonsByType/PokemonsByType';
 import ShowMoreBtn from '../UI/ShowMoreBtn';

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import { Pokemon } from '../Interfaces/Pokemon';
+import { Pokemon } from '../../Interfaces/Pokemon';
 import AddToCartBtn from '../UI/AddToCartBtn';
 import './PokemonCard.scss'
 
