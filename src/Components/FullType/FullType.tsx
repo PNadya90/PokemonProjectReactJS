@@ -16,7 +16,7 @@ export default function FullType() {
     <>
       <h2 className='type-title'> {typeName?.toLocaleUpperCase()} POKEMONS </h2>
       <div className='full-type-area'>
-        <PokemonsByType key={id} typeName={typeName} id={id} count={count} />
+        <PokemonsByType key={id} id={id} count={count} />
       </div>
       <div className="btn-area">
         <ShowMoreBtn onClick={showMorePokemons}>SHOW MORE {typeName?.toLocaleUpperCase()} POKEMONS</ShowMoreBtn>

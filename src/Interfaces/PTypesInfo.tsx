@@ -1,8 +1,8 @@
 
-interface TypeInfo {
+interface PTypesInfo {
     name: string;
     url: string;
     id?:number|undefined;
 }
 
-export default TypeInfo
+export default PTypesInfo

@@ -49,6 +49,7 @@ $border-color-hover: $color-black;
     border: 2px solid $border-color;
     border-radius: 6px;
     transition: all .5s ease;
+    margin: 0 3%;
 
     &--stripe {
         overflow: hidden;

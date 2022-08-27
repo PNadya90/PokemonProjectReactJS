@@ -1,6 +1,6 @@
   import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import TypeInfo from "../../../Interfaces/TypeInfo";
+import PTypesInfo from "../../../Interfaces/PTypesInfo";
 import ShowMoreBtn from "../../UI/ShowMoreBtn";
 import PokemonsByType from "./PokemonsByType/PokemonsByType";
 import './PType.scss';
@@ -8,7 +8,7 @@ import './PType.scss';
 function PType() {
     let typesName: string[] | undefined;
     let typeId: number;
-    const [pTypes, setTypes] = useState<TypeInfo[]>();
+    const [pTypes, setTypes] = useState<PTypesInfo[]>();
     let [typesCount, setTypesCount] = useState(2);
     let pokemonsCount=6;
     // let [err, setErr] = useState();
@@ -44,7 +44,7 @@ function PType() {
                     <Link to= {`${pType.name}/${pType.id}`} className='link-to'>
                     <ShowMoreBtn>SHOW ALL {pType.name.toLocaleUpperCase()} POKEMONS</ShowMoreBtn>
                     </Link>
-                    <PokemonsByType id={pType.id?.toString()} typeName={pType.name} count={pokemonsCount}/>
+                    <PokemonsByType id={pType.id?.toString()} count={pokemonsCount}/>
                 </div>
             }) : console.log('LOADING ...')}
             <ShowMoreBtn onClick={showMoreTypes}>SHOW MORE POKEMONS TYPES</ShowMoreBtn>

@@ -41,13 +41,12 @@ $border-color-hover: $color-black;
     @include reset-button;
     display: block;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 11px;
     padding: 1em;
     height: 70px;
     background-color: $btn-background;
     color: $btn-color;
     border: 2px solid $border-color;
-    border-radius: 6px;
     transition: all .5s ease;
 
     &--stripe {

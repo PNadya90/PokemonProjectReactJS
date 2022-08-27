@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import PokemonsByTypeInterface from '../../../../Interfaces/PokemonsByTypeInterface';
+import { SomeTypeInfo } from '../../../../Interfaces/SomeType';
 import PokemonShortDscr from '../../../PokemonShortDscr/PokemonShortDscr';
 
-interface SomeType {
-    id: string | undefined,
-    typeName: string | undefined,
-    count: number | undefined
-}
 
-export default function PokemonsByType(props: SomeType) {
+export default function PokemonsByType(props: SomeTypeInfo) {
     let [pokemons, setPokemons] = useState<PokemonsByTypeInterface[]>();
     const pTypeId: string | undefined = props.id;
     let pokemonsId: number[] | undefined;
